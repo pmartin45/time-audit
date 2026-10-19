@@ -1,0 +1,753 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Session 3 Pre-Work - Your Time Audit</title>
+<meta name="robots" content="noindex, nofollow"/>
+<meta name="description" content="The Visibility Gap - Session 3 pre-work: audit your last five working days in 30-minute blocks."/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMjAgMzIwIiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IlBpZXIgTWFydGluIG1vbm9ncmFtIj4KICAKICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMzIwIiBoZWlnaHQ9IjMyMCIgZmlsbD0iI0ZBRjdGMCI+PC9yZWN0PgogIDx0ZXh0IHg9IjkyIiB5PSIyMjIiIGZvbnQtZmFtaWx5PSJDb3Jtb3JhbnQgR2FyYW1vbmQsIEdlb3JnaWEsIHNlcmlmIiBmb250LXdlaWdodD0iNTAwIiBmb250LXNpemU9IjI0MCIgZmlsbD0iIzJBMzA1MCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+UDwvdGV4dD4KICA8bGluZSB4MT0iMTYwIiB5MT0iNzAiIHgyPSIxNjAiIHkyPSIyNTAiIHN0cm9rZT0iIzdCQTA5OCIgc3Ryb2tlLXdpZHRoPSIyIj48L2xpbmU+CiAgPHRleHQgeD0iMjI4IiB5PSIyMjIiIGZvbnQtZmFtaWx5PSJDb3Jtb3JhbnQgR2FyYW1vbmQsIEdlb3JnaWEsIHNlcmlmIiBmb250LXdlaWdodD0iNTAwIiBmb250LXNpemU9IjI0MCIgZmlsbD0iIzJBMzA1MCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+TTwvdGV4dD4KPC9zdmc+"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+/* ============================================================
+   Pier Martin / The Visibility Gap - Design Tokens (inlined)
+   ============================================================ */
+:root {
+  --pm-canvas: #FAF7F0;
+  --pm-surface: #FFFFFF;
+  --pm-surface-2: #F2EDE3;
+  --pm-border: #E5DFD3;
+  --pm-navy: #2A3050;
+  --pm-navy-deep: #1B2038;
+  --pm-navy-light: #3D4574;
+  --pm-sage: #7BA098;
+  --pm-sage-light: #9DBDB3;
+  --pm-sage-deep: #5C7E76;
+  --pm-cream: #F2EDE3;
+  --pm-cream-deep: #E6DFD0;
+  --pm-text: #1B2038;
+  --pm-text-dim: #5D6068;
+  --pm-text-mute: #8B8B92;
+  --pm-text-on-dark: #F5F1E8;
+  --pm-bg-dark: #0A0A0B;
+  --pm-surface-dark: #14161A;
+  --pm-border-dark: #2A2D33;
+  --pm-warn: #D9A05B;
+  --pm-font-display: "Montserrat", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --pm-font-serif:   "Cormorant Garamond", "Playfair Display", Georgia, serif;
+  --pm-font-mono:    "JetBrains Mono", "Roboto Mono", ui-monospace, Menlo, monospace;
+  --pm-radius-sm: 4px;
+  --pm-radius:    8px;
+  --pm-radius-lg: 16px;
+  --pm-space-1: 4px;
+  --pm-space-2: 8px;
+  --pm-space-3: 12px;
+  --pm-space-4: 16px;
+  --pm-space-5: 24px;
+  --pm-space-6: 32px;
+  --pm-space-7: 48px;
+  --pm-space-8: 64px;
+  --pm-space-9: 96px;
+  --pm-shadow-sm: 0 1px 2px rgba(27, 32, 56, 0.06);
+  --pm-shadow:    0 4px 12px rgba(27, 32, 56, 0.08);
+  --pm-shadow-lg: 0 12px 32px rgba(27, 32, 56, 0.12);
+  --pm-logo-clearspace: 0.5;
+  --pm-ease:        cubic-bezier(0.22, 1, 0.36, 1);
+  --pm-ease-quick:  cubic-bezier(0.4, 0, 0.2, 1);
+  --pm-dur-fast:    140ms;
+  --pm-dur:         220ms;
+  --pm-dur-slow:    380ms;
+}
+
+html, body {
+  background: var(--pm-canvas);
+  color: var(--pm-text);
+  font-family: var(--pm-font-display);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* ── Tag palette (brand-tonal, four distinct values) ───────── */
+:root {
+  --tag-a: #2A3050;
+  --tag-d: #5C7E76;
+  --tag-l: #9DBDB3;
+  --tag-n: #D9A05B;
+  --tag-a-ink: var(--pm-text-on-dark);
+  --tag-d-ink: var(--pm-text-on-dark);
+  --tag-l-ink: var(--pm-navy-deep);
+  --tag-n-ink: var(--pm-navy-deep);
+  --tag-a-soft: #E7E9F0;
+  --tag-d-soft: #E2EAE7;
+  --tag-l-soft: #EAF1EE;
+  --tag-n-soft: #F6EAD7;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; }
+body { -webkit-font-smoothing: antialiased; }
+
+/* ── Sticky action bar ─────────────────────────────────────── */
+.bar {
+  position: sticky; top: 0; z-index: 50;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: var(--pm-space-4);
+  padding: 12px clamp(20px, 5vw, 56px);
+  background: rgba(250,247,240,0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--pm-border);
+}
+.bar__id { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.bar__mono { width: 30px; height: 30px; flex: none; border-radius: var(--pm-radius-sm); }
+.bar__label {
+  font-family: var(--pm-font-display); font-weight: 500; font-size: 13px;
+  letter-spacing: 0.02em; color: var(--pm-text); white-space: nowrap;
+  overflow: hidden; text-overflow: ellipsis;
+}
+.bar__label span { color: var(--pm-text-mute); }
+.bar__right { display: flex; align-items: center; gap: 16px; flex: none; }
+.bar__count {
+  font-family: var(--pm-font-mono); font-size: 12.5px; color: var(--pm-text-dim);
+  white-space: nowrap;
+}
+.bar__count b { color: var(--pm-navy); font-weight: 600; }
+.btn-print {
+  font-family: var(--pm-font-display); font-weight: 500; font-size: 14px;
+  letter-spacing: 0.01em;
+  padding: 10px 18px; border-radius: var(--pm-radius);
+  border: 1px solid transparent; cursor: pointer;
+  background: var(--pm-navy); color: var(--pm-text-on-dark);
+  display: inline-flex; align-items: center; gap: 9px;
+  transition: background var(--pm-dur) var(--pm-ease), transform var(--pm-dur-fast) var(--pm-ease);
+}
+.btn-print:hover { background: var(--pm-navy-light); }
+.btn-print:active { transform: translateY(1px); }
+.btn-print svg { width: 17px; height: 17px; }
+
+/* ── Page shell ────────────────────────────────────────────── */
+.wrap {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: clamp(36px, 6vw, 72px) clamp(20px, 5vw, 56px) 120px;
+}
+
+.eyebrow {
+  font-family: var(--pm-font-display); font-weight: 500; font-size: 12px;
+  letter-spacing: 0.18em; text-transform: uppercase; color: var(--pm-text-mute);
+  margin: 0 0 18px;
+}
+.title {
+  font-family: var(--pm-font-display); font-weight: 700;
+  font-size: clamp(34px, 5.2vw, 56px); line-height: 1.05; letter-spacing: -0.02em;
+  color: var(--pm-text); margin: 0;
+}
+.lede {
+  font-family: var(--pm-font-serif); font-style: italic; font-weight: 500;
+  font-size: clamp(20px, 2.6vw, 26px); line-height: 1.34; color: var(--pm-navy);
+  margin: 20px 0 0; max-width: 30em;
+}
+.sage-rule { height: 2px; width: 64px; background: var(--pm-sage); border: 0; margin: 30px 0; }
+
+.prose p {
+  font-family: var(--pm-font-display); font-weight: 400; font-size: 17px;
+  line-height: 1.62; color: var(--pm-text); margin: 0 0 16px; max-width: 40em;
+  text-wrap: pretty;
+}
+.prose em { font-style: italic; }
+.prose .work { font-family: var(--pm-font-serif); font-style: italic; font-size: 1.06em; }
+
+.nostore {
+  display: flex; align-items: center; gap: 10px;
+  font-family: var(--pm-font-display); font-size: 13.5px; color: var(--pm-text-dim);
+  background: var(--pm-surface-2); border: 1px solid var(--pm-border);
+  border-radius: var(--pm-radius); padding: 12px 16px; margin-top: 8px;
+  max-width: 40em;
+}
+.nostore svg { width: 16px; height: 16px; flex: none; color: var(--pm-sage-deep); }
+
+/* ── Section heads ─────────────────────────────────────────── */
+.section { margin-top: clamp(48px, 7vw, 80px); }
+.section__num {
+  font-family: var(--pm-font-mono); font-size: 13px; color: var(--pm-sage-deep);
+  letter-spacing: 0.04em;
+}
+.section__h {
+  font-family: var(--pm-font-display); font-weight: 600; font-size: clamp(26px, 3.2vw, 32px);
+  line-height: 1.15; letter-spacing: -0.01em; color: var(--pm-text); margin: 6px 0 0;
+}
+.section__sub {
+  font-family: var(--pm-font-display); font-size: 15.5px; color: var(--pm-text-dim);
+  margin: 10px 0 0;
+}
+
+/* ── Category cards ────────────────────────────────────────── */
+.cats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 28px; }
+.cat {
+  background: var(--pm-surface); border: 1px solid var(--pm-border);
+  border-radius: var(--pm-radius); padding: 22px 24px;
+}
+.cat__head { display: flex; align-items: center; gap: 12px; }
+.badge {
+  width: 34px; height: 34px; flex: none; border-radius: var(--pm-radius-sm);
+  display: grid; place-items: center;
+  font-family: var(--pm-font-display); font-weight: 700; font-size: 16px;
+}
+.badge--a { background: var(--tag-a); color: var(--tag-a-ink); }
+.badge--d { background: var(--tag-d); color: var(--tag-d-ink); }
+.badge--l { background: var(--tag-l); color: var(--tag-l-ink); }
+.badge--n { background: var(--tag-n); color: var(--tag-n-ink); }
+.cat__name { font-family: var(--pm-font-display); font-weight: 600; font-size: 18px; color: var(--pm-text); }
+.cat__what { font-family: var(--pm-font-display); font-size: 15px; color: var(--pm-text); margin: 16px 0 0; line-height: 1.5; }
+.cat__eg { font-family: var(--pm-font-display); font-size: 13.5px; color: var(--pm-text-dim); margin: 8px 0 0; line-height: 1.5; }
+.cat__eg b { font-weight: 500; color: var(--pm-text-mute); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; display: block; margin-bottom: 3px; }
+
+.rule-callout {
+  margin-top: 20px; background: var(--pm-cream-deep);
+  border: 1px solid var(--pm-border); border-radius: var(--pm-radius);
+  padding: 20px 24px;
+  font-family: var(--pm-font-display); font-size: 15.5px; line-height: 1.55; color: var(--pm-navy-deep);
+}
+.rule-callout b { font-weight: 600; }
+.rule-callout .work { font-family: var(--pm-font-serif); font-style: italic; }
+
+/* ── How-to list ───────────────────────────────────────────── */
+.steps { list-style: none; margin: 26px 0 0; padding: 0; display: grid; gap: 14px; max-width: 44em; }
+.steps li { display: flex; gap: 16px; align-items: flex-start; }
+.steps .n {
+  font-family: var(--pm-font-mono); font-size: 13px; color: var(--pm-sage-deep);
+  width: 24px; flex: none; padding-top: 2px;
+}
+.steps .t { font-family: var(--pm-font-display); font-size: 16px; line-height: 1.55; color: var(--pm-text); }
+
+/* ── Tables (worked example + days) ────────────────────────── */
+.tbl { margin-top: 22px; border: 1px solid var(--pm-border); border-radius: var(--pm-radius); overflow: hidden; background: var(--pm-surface); }
+.tbl__head, .block-row {
+  display: grid; grid-template-columns: 128px 1fr 148px; align-items: stretch;
+}
+.tbl__head {
+  background: var(--pm-surface-2); border-bottom: 1px solid var(--pm-border);
+}
+.tbl__head > div {
+  font-family: var(--pm-font-display); font-weight: 600; font-size: 11.5px;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--pm-text-mute);
+  padding: 11px 16px;
+}
+.tbl__head > div + div { border-left: 1px solid var(--pm-border); }
+
+.block-row { border-top: 1px solid var(--pm-border); }
+.block-row:first-child { border-top: 0; }
+.block-time {
+  font-family: var(--pm-font-mono); font-size: 13px; color: var(--pm-text-dim);
+  padding: 0 16px; display: flex; align-items: center; white-space: nowrap;
+  background: var(--pm-surface-2);
+}
+.block-what {
+  border: 0; border-left: 1px solid var(--pm-border); border-right: 1px solid var(--pm-border);
+  background: transparent; outline: none;
+  font-family: var(--pm-font-display); font-size: 14.5px; color: var(--pm-text);
+  padding: 12px 16px; width: 100%; min-height: 44px;
+}
+.block-what::placeholder { color: var(--pm-text-mute); opacity: .55; }
+.block-what:focus { box-shadow: inset 0 0 0 2px var(--pm-sage); border-radius: 2px; }
+
+.tag-picker { display: flex; align-items: center; gap: 5px; padding: 7px 12px 7px 14px; position: relative; }
+.tag-chip {
+  width: 28px; height: 28px; flex: none; border-radius: var(--pm-radius-sm);
+  border: 1px solid var(--pm-border); background: var(--pm-surface);
+  font-family: var(--pm-font-display); font-weight: 600; font-size: 13px; color: var(--pm-text-mute);
+  cursor: pointer; display: grid; place-items: center;
+  transition: border-color var(--pm-dur-fast) var(--pm-ease), color var(--pm-dur-fast) var(--pm-ease), background var(--pm-dur-fast) var(--pm-ease);
+}
+.tag-chip[data-tag="A"]:hover { border-color: var(--tag-a); color: var(--tag-a); }
+.tag-chip[data-tag="D"]:hover { border-color: var(--tag-d); color: var(--tag-d); }
+.tag-chip[data-tag="L"]:hover { border-color: var(--tag-l); color: var(--tag-d); }
+.tag-chip[data-tag="N"]:hover { border-color: var(--tag-n); color: var(--tag-n); }
+.tag-chip.is-on[data-tag="A"] { background: var(--tag-a); border-color: var(--tag-a); color: var(--tag-a-ink); }
+.tag-chip.is-on[data-tag="D"] { background: var(--tag-d); border-color: var(--tag-d); color: var(--tag-d-ink); }
+.tag-chip.is-on[data-tag="L"] { background: var(--tag-l); border-color: var(--tag-l); color: var(--tag-l-ink); }
+.tag-chip.is-on[data-tag="N"] { background: var(--tag-n); border-color: var(--tag-n); color: var(--tag-n-ink); }
+
+.row-del {
+  border: 0; background: transparent; cursor: pointer; color: var(--pm-text-mute);
+  width: 22px; height: 22px; display: grid; place-items: center; border-radius: 50%;
+  margin-left: 2px; opacity: 0; transition: opacity var(--pm-dur-fast), color var(--pm-dur-fast), background var(--pm-dur-fast);
+}
+.row-del svg { width: 13px; height: 13px; }
+.block-row:hover .row-del { opacity: .6; }
+.row-del:hover { opacity: 1; color: var(--pm-warn); background: var(--tag-n-soft); }
+
+/* worked example - static, read-only badges */
+.ex .block-what { color: var(--pm-text); }
+.ex .ex-tag {
+  align-self: center; margin: 0 14px; width: 28px; height: 28px; border-radius: var(--pm-radius-sm);
+  display: grid; place-items: center; font-family: var(--pm-font-display); font-weight: 700; font-size: 13px;
+}
+.ex-tag--n { background: var(--tag-n); color: var(--tag-n-ink); }
+.ex-tag--l { background: var(--tag-l); color: var(--tag-l-ink); }
+.ex .tag-picker { justify-content: flex-start; }
+
+/* ── Days ──────────────────────────────────────────────────── */
+.day { margin-top: 40px; }
+.day__head { display: flex; align-items: baseline; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+.day__title { font-family: var(--pm-font-display); font-weight: 600; font-size: 21px; color: var(--pm-text); }
+.day__title em { font-style: normal; color: var(--pm-sage-deep); font-family: var(--pm-font-mono); font-size: 14px; }
+.day__date { display: flex; align-items: center; gap: 10px; }
+.day__date label { font-family: var(--pm-font-display); font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--pm-text-mute); }
+.day__date input {
+  border: 0; border-bottom: 1px solid var(--pm-border); background: transparent; outline: none;
+  font-family: var(--pm-font-display); font-size: 14.5px; color: var(--pm-text);
+  padding: 4px 4px; width: 190px;
+}
+.day__date input:focus { border-bottom-color: var(--pm-sage); }
+.day__date input::placeholder { color: var(--pm-text-mute); opacity: .6; }
+.add-row {
+  margin-top: 10px; font-family: var(--pm-font-display); font-size: 13.5px; font-weight: 500;
+  color: var(--pm-sage-deep); background: transparent; border: 1px dashed var(--pm-border);
+  border-radius: var(--pm-radius); padding: 9px 16px; cursor: pointer; width: 100%;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  transition: border-color var(--pm-dur-fast), background var(--pm-dur-fast);
+}
+.add-row:hover { border-color: var(--pm-sage); background: var(--tag-l-soft); }
+.add-row svg { width: 15px; height: 15px; }
+
+/* ── Tally + split bar ─────────────────────────────────────── */
+.tally-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 28px; align-items: start; }
+@media (max-width: 720px) {
+  .tally-wrap { grid-template-columns: 1fr; }
+  .cats { grid-template-columns: 1fr; }
+}
+.tally { border: 1px solid var(--pm-border); border-radius: var(--pm-radius); overflow: hidden; background: var(--pm-surface); }
+.tally__row { display: grid; grid-template-columns: 1fr 80px 140px; align-items: center; border-top: 1px solid var(--pm-border); }
+.tally__row:first-child { border-top: 0; background: var(--pm-surface-2); }
+.tally__row:first-child > div { font-family: var(--pm-font-display); font-weight: 600; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--pm-text-mute); padding: 11px 16px; }
+.tally__cell { padding: 12px 16px; font-family: var(--pm-font-display); font-size: 15px; }
+.tally__tag { display: flex; align-items: center; gap: 11px; }
+.tally__dot { width: 14px; height: 14px; border-radius: 4px; flex: none; }
+.tally__dot--a { background: var(--tag-a); } .tally__dot--d { background: var(--tag-d); }
+.tally__dot--l { background: var(--tag-l); } .tally__dot--n { background: var(--tag-n); }
+.tally__count { font-family: var(--pm-font-mono); font-size: 15px; color: var(--pm-text); text-align: right; }
+.tally__pct { font-family: var(--pm-font-mono); font-size: 15px; color: var(--pm-text-dim); text-align: right; }
+.tally__row--total { background: var(--pm-cream-deep); }
+.tally__row--total .tally__cell { font-weight: 600; }
+
+.splitcard__label { font-family: var(--pm-font-display); font-weight: 600; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--pm-text-mute); margin-bottom: 12px; }
+.splitbar { height: 40px; border-radius: var(--pm-radius); overflow: hidden; display: flex; background: var(--pm-surface-2); border: 1px solid var(--pm-border); }
+.splitbar__seg { height: 100%; transition: width var(--pm-dur-slow) var(--pm-ease); }
+.splitbar__seg--a { background: var(--tag-a); } .splitbar__seg--d { background: var(--tag-d); }
+.splitbar__seg--l { background: var(--tag-l); } .splitbar__seg--n { background: var(--tag-n); }
+.splitbar__empty { margin: auto; font-family: var(--pm-font-display); font-size: 13px; color: var(--pm-text-mute); }
+.splitlegend { display: flex; flex-wrap: wrap; gap: 14px 20px; margin-top: 16px; }
+.splitlegend span { display: flex; align-items: center; gap: 8px; font-family: var(--pm-font-display); font-size: 13px; color: var(--pm-text-dim); }
+.splitlegend i { width: 11px; height: 11px; border-radius: 3px; display: inline-block; }
+.split-read { font-family: var(--pm-font-serif); font-style: italic; font-size: 18px; line-height: 1.4; color: var(--pm-navy); margin-top: 22px; min-height: 1.4em; }
+
+/* ── Reflection ────────────────────────────────────────────── */
+.reflect { display: grid; gap: 22px; margin-top: 28px; max-width: 46em; }
+.q__label { display: flex; gap: 14px; align-items: flex-start; }
+.q__num { font-family: var(--pm-font-mono); font-size: 13px; color: var(--pm-sage-deep); padding-top: 3px; }
+.q__text { font-family: var(--pm-font-display); font-weight: 500; font-size: 17px; line-height: 1.45; color: var(--pm-text); }
+.q__hint { font-weight: 400; color: var(--pm-text-dim); }
+.q textarea, .answer {
+  width: 100%; margin-top: 10px; box-sizing: border-box; resize: vertical;
+  background: var(--pm-surface); border: 1px solid var(--pm-border); border-radius: var(--pm-radius);
+  font-family: var(--pm-font-display); font-size: 15px; line-height: 1.55; color: var(--pm-text);
+  padding: 13px 16px; outline: none; min-height: 64px;
+}
+.q textarea:focus, .answer:focus { border-color: var(--pm-sage); box-shadow: 0 0 0 1px var(--pm-sage); }
+.q textarea::placeholder { color: var(--pm-text-mute); opacity: .6; }
+
+.star {
+  margin-top: 26px; display: flex; gap: 14px; align-items: flex-start;
+  background: var(--tag-n-soft); border: 1px solid #ECD9B6; border-radius: var(--pm-radius);
+  padding: 18px 22px; max-width: 46em;
+}
+.star svg { width: 22px; height: 22px; flex: none; color: var(--pm-warn); margin-top: 2px; }
+.star p { margin: 0; font-family: var(--pm-font-display); font-size: 15.5px; line-height: 1.5; color: var(--pm-navy-deep); }
+.star b { font-weight: 600; }
+
+/* ── Closing ───────────────────────────────────────────────── */
+.closing {
+  margin-top: clamp(48px, 7vw, 72px); padding-top: 34px; border-top: 1px solid var(--pm-border);
+}
+.closing p { font-family: var(--pm-font-display); font-size: 16px; line-height: 1.62; color: var(--pm-text); max-width: 42em; margin: 0 0 14px; text-wrap: pretty; }
+.closing .kicker { font-family: var(--pm-font-serif); font-style: italic; font-size: clamp(21px, 2.7vw, 28px); line-height: 1.35; color: var(--pm-navy); max-width: 24em; }
+.vault { font-family: var(--pm-font-mono); font-size: 13.5px; color: var(--pm-sage-deep); background: var(--pm-surface-2); border: 1px solid var(--pm-border); border-radius: var(--pm-radius-sm); padding: 2px 8px; }
+
+.save-cta {
+  margin-top: clamp(40px, 6vw, 56px);
+  padding: clamp(24px, 4vw, 32px) clamp(24px, 4vw, 36px);
+  background: var(--pm-surface-2);
+  border: 1px solid var(--pm-border);
+  border-radius: var(--pm-radius-lg);
+  display: flex; flex-direction: column; align-items: flex-start; gap: 14px;
+}
+.save-cta__title { font-family: var(--pm-font-display); font-weight: 600; font-size: 17px; color: var(--pm-navy); margin: 0; }
+.save-cta__hint { font-family: var(--pm-font-display); font-size: 14px; color: var(--pm-text-dim); margin: 0; max-width: 38em; line-height: 1.55; }
+.btn-print--lg { padding: 14px 22px; font-size: 15px; }
+.btn-print--lg svg { width: 19px; height: 19px; }
+
+.footer {
+  margin-top: clamp(48px, 7vw, 80px); display: flex; align-items: center; gap: 14px;
+  color: var(--pm-text-mute);
+}
+.footer img { width: 26px; height: 26px; border-radius: 4px; }
+.footer span { font-family: var(--pm-font-display); font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; }
+
+/* ── Print ─────────────────────────────────────────────────── */
+@media print {
+  @page { margin: 14mm; }
+  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  body { background: #fff; }
+  .bar, .add-row, .row-del, .save-cta { display: none !important; }
+  .wrap { max-width: none; padding: 0; }
+  .section { margin-top: 30px; }
+  .day { break-inside: avoid; margin-top: 26px; }
+  .day:nth-of-type(n+2) { break-before: page; }
+  .block-row, .cat, .q, .star, .tally { break-inside: avoid; }
+  .tbl, .tally, .cat, .splitbar, .answer, .q textarea, .block-what, .day__date input { box-shadow: none !important; }
+  .block-what:focus, .q textarea:focus { box-shadow: none !important; }
+  .nostore { display: none; }
+  a[href]:after { content: ""; }
+  .splitbar__seg { transition: none; }
+}
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <div class="bar__id">
+    <img class="bar__mono" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMjAgMzIwIiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IlBpZXIgTWFydGluIG1vbm9ncmFtIj4KICAKICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMzIwIiBoZWlnaHQ9IjMyMCIgZmlsbD0iI0ZBRjdGMCI+PC9yZWN0PgogIDx0ZXh0IHg9IjkyIiB5PSIyMjIiIGZvbnQtZmFtaWx5PSJDb3Jtb3JhbnQgR2FyYW1vbmQsIEdlb3JnaWEsIHNlcmlmIiBmb250LXdlaWdodD0iNTAwIiBmb250LXNpemU9IjI0MCIgZmlsbD0iIzJBMzA1MCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+UDwvdGV4dD4KICA8bGluZSB4MT0iMTYwIiB5MT0iNzAiIHgyPSIxNjAiIHkyPSIyNTAiIHN0cm9rZT0iIzdCQTA5OCIgc3Ryb2tlLXdpZHRoPSIyIj48L2xpbmU+CiAgPHRleHQgeD0iMjI4IiB5PSIyMjIiIGZvbnQtZmFtaWx5PSJDb3Jtb3JhbnQgR2FyYW1vbmQsIEdlb3JnaWEsIHNlcmlmIiBmb250LXdlaWdodD0iNTAwIiBmb250LXNpemU9IjI0MCIgZmlsbD0iIzJBMzA1MCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+TTwvdGV4dD4KPC9zdmc+" alt="Pier Martin"/>
+    <div class="bar__label">Time Audit <span>&middot; Session 3 Pre-Work</span></div>
+  </div>
+  <div class="bar__right">
+    <div class="bar__count" id="barCount"><b>0</b> blocks tagged</div>
+    <button class="btn-print" onclick="window.print()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Save as PDF
+    </button>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <!-- ── Header ── -->
+  <header>
+    <p class="eyebrow">The Visibility Gap &middot; Session 3 Pre-Work</p>
+    <h1 class="title">Your Time Audit</h1>
+    <p class="lede">Time: ~20 minutes. Do this before Session 3 and bring it with you &mdash; one of you will design a brand-new operating rhythm live, built straight off an audit just like this.</p>
+  </header>
+
+  <hr class="sage-rule"/>
+
+  <div class="prose">
+    <p>Your calendar is the most honest document you own. It doesn&rsquo;t say what you value &mdash; it shows it. Before we design a system that scales, we have to see where your time <em>actually</em> goes. Not where you think it goes. Where it goes.</p>
+    <p>This is a backward-looking audit. Pull up your last five working days and account for them in 30-minute blocks. You&rsquo;ll have watched <span class="work">Why Your Calendar Is Your Operating System</span> before this &mdash; the audit is where that idea stops being a video and starts being your week.</p>
+  </div>
+
+  <div class="nostore">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+    This worksheet doesn&rsquo;t save anything. Fill it in one sitting, then print it or save it as a PDF to keep.
+  </div>
+
+  <!-- ── 01 Categories ── -->
+  <section class="section">
+    <div class="section__num">01</div>
+    <h2 class="section__h">The four categories</h2>
+    <p class="section__sub">Every block gets exactly one tag.</p>
+
+    <div class="cats">
+      <div class="cat">
+        <div class="cat__head"><div class="badge badge--a">A</div><div class="cat__name">Align</div></div>
+        <p class="cat__what">Keeping people pointed the same direction.</p>
+        <p class="cat__eg"><b>Looks like</b>1:1s, stand-ups, status syncs, stakeholder updates.</p>
+      </div>
+      <div class="cat">
+        <div class="cat__head"><div class="badge badge--d">D</div><div class="cat__name">Decide</div></div>
+        <p class="cat__what">Making or unblocking a real decision.</p>
+        <p class="cat__eg"><b>Looks like</b>Prioritisation, approvals, trade-off calls, removing a blocker.</p>
+      </div>
+      <div class="cat">
+        <div class="cat__head"><div class="badge badge--l">L</div><div class="cat__name">Learn</div></div>
+        <p class="cat__what">Building insight or capability &mdash; yours or your team&rsquo;s.</p>
+        <p class="cat__eg"><b>Looks like</b>Deep work, analysis, coaching a report, protected thinking time.</p>
+      </div>
+      <div class="cat">
+        <div class="cat__head"><div class="badge badge--n">N</div><div class="cat__name">Noise</div></div>
+        <p class="cat__what">Low-leverage, reactive, or not-your-job.</p>
+        <p class="cat__eg"><b>Looks like</b>Redundant meetings, Slack churn, tickets a report should own, constant context-switching.</p>
+      </div>
+    </div>
+
+    <div class="rule-callout">
+      <b>One rule:</b> tag a block for what it actually produced, not what it was called. A <span class="work">&ldquo;decision meeting&rdquo;</span> where nothing got decided is Noise.
+    </div>
+  </section>
+
+  <!-- ── 02 How to ── -->
+  <section class="section">
+    <div class="section__num">02</div>
+    <h2 class="section__h">How to do it</h2>
+
+    <ol class="steps">
+      <li><span class="n">1</span><span class="t">Open your calendar to the last five working days.</span></li>
+      <li><span class="n">2</span><span class="t">Go block by block, 30 minutes at a time. Reconstruct the blank stretches from memory &mdash; and be honest about them.</span></li>
+      <li><span class="n">3</span><span class="t">Tag each block <strong>A / D / L / N</strong>.</span></li>
+      <li><span class="n">4</span><span class="t">Don&rsquo;t optimise as you go. Just record. The pattern is the whole point.</span></li>
+    </ol>
+
+    <p class="section__sub" style="margin-top:28px;">A worked block, so you see the grain:</p>
+    <div class="tbl ex">
+      <div class="tbl__head"><div>Time block</div><div>What happened</div><div>Tag</div></div>
+      <div class="block-row">
+        <div class="block-time">09:00&ndash;09:30</div>
+        <div class="block-what" style="border-left:1px solid var(--pm-border);display:flex;align-items:center;">Standup, then cleared three Slack threads</div>
+        <div class="tag-picker"><div class="ex-tag ex-tag--n">N</div></div>
+      </div>
+      <div class="block-row">
+        <div class="block-time">09:30&ndash;10:00</div>
+        <div class="block-what" style="border-left:1px solid var(--pm-border);display:flex;align-items:center;">Reviewed Daniel&rsquo;s churn analysis, gave direction</div>
+        <div class="tag-picker"><div class="ex-tag ex-tag--l">L</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 03 The five days ── -->
+  <section class="section">
+    <div class="section__num">03</div>
+    <h2 class="section__h">The five days</h2>
+    <p class="section__sub">Fill what&rsquo;s true. Add or delete rows so the times match your real day.</p>
+    <div id="days"></div>
+  </section>
+
+  <!-- ── 04 Tally ── -->
+  <section class="section">
+    <div class="section__num">04</div>
+    <h2 class="section__h">The tally</h2>
+    <p class="section__sub">Counts update as you tag. We&rsquo;re looking for shape, not precision.</p>
+
+    <div class="tally-wrap">
+      <div class="tally" id="tally">
+        <div class="tally__row"><div>Tag</div><div style="text-align:right;font:inherit;">Blocks</div><div style="text-align:right;font:inherit;">% of week</div></div>
+        <div class="tally__row"><div class="tally__cell tally__tag"><span class="tally__dot tally__dot--a"></span>Align</div><div class="tally__cell tally__count" data-count="A">0</div><div class="tally__cell tally__pct" data-pct="A">&mdash;</div></div>
+        <div class="tally__row"><div class="tally__cell tally__tag"><span class="tally__dot tally__dot--d"></span>Decide</div><div class="tally__cell tally__count" data-count="D">0</div><div class="tally__cell tally__pct" data-pct="D">&mdash;</div></div>
+        <div class="tally__row"><div class="tally__cell tally__tag"><span class="tally__dot tally__dot--l"></span>Learn</div><div class="tally__cell tally__count" data-count="L">0</div><div class="tally__cell tally__pct" data-pct="L">&mdash;</div></div>
+        <div class="tally__row"><div class="tally__cell tally__tag"><span class="tally__dot tally__dot--n"></span>Noise</div><div class="tally__cell tally__count" data-count="N">0</div><div class="tally__cell tally__pct" data-pct="N">&mdash;</div></div>
+        <div class="tally__row tally__row--total"><div class="tally__cell">Tagged total</div><div class="tally__cell tally__count" id="totalCount">0</div><div class="tally__cell tally__pct">100%</div></div>
+      </div>
+
+      <div class="splitcard">
+        <div class="splitcard__label">The shape of your week</div>
+        <div class="splitbar" id="splitbar"><div class="splitbar__empty">Tag your blocks to see the split</div></div>
+        <div class="splitlegend">
+          <span><i style="background:var(--tag-a)"></i>Align</span>
+          <span><i style="background:var(--tag-d)"></i>Decide</span>
+          <span><i style="background:var(--tag-l)"></i>Learn</span>
+          <span><i style="background:var(--tag-n)"></i>Noise</span>
+        </div>
+        <div class="split-read" id="splitRead"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 05 What it's telling you ── -->
+  <section class="section">
+    <div class="section__num">05</div>
+    <h2 class="section__h">What the audit is telling you</h2>
+    <p class="section__sub">Three honest answers. These are exactly what we&rsquo;ll work from in the room.</p>
+
+    <div class="reflect">
+      <div class="q">
+        <div class="q__label"><span class="q__num">1</span><span class="q__text">Where is the Noise concentrated? <span class="q__hint">Name the single biggest source &mdash; one meeting, one channel, one habit.</span></span></div>
+        <textarea rows="2" placeholder="Write here&hellip;"></textarea>
+      </div>
+      <div class="q">
+        <div class="q__label"><span class="q__num">2</span><span class="q__text">What in your week can only you do? <span class="q__hint">(It&rsquo;s almost always less than you think.)</span></span></div>
+        <textarea rows="2" placeholder="Write here&hellip;"></textarea>
+      </div>
+      <div class="q">
+        <div class="q__label"><span class="q__num">3</span><span class="q__text">Where are you doing someone else&rsquo;s job? <span class="q__hint">Be specific: whose, and which block.</span></span></div>
+        <textarea rows="2" placeholder="Write here&hellip;"></textarea>
+      </div>
+    </div>
+
+    <div class="star">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      <p>Star the one block this week you most wish you&rsquo;d never agreed to. <b>That&rsquo;s where we start.</b></p>
+    </div>
+  </section>
+
+  <!-- ── Closing ── -->
+  <div class="closing">
+    <p>Save this in your vault under <span class="vault">07 Weekly Updates</span>. In Session 3 we use it twice: once to find your leverage &mdash; what only you can do vs. what you&rsquo;ve delegated to yourself by default &mdash; and once to design your operating rhythm, the Personal / Team / Stakeholder cadences that protect your Decide and Learn time and starve the Noise.</p>
+    <p class="kicker">You can&rsquo;t design a system that scales until you&rsquo;ve seen the one you&rsquo;re running by accident. This is that.</p>
+  </div>
+
+  <div class="save-cta">
+    <p class="save-cta__title">Done? Save a copy before you close this tab.</p>
+    <p class="save-cta__hint">This worksheet doesn&rsquo;t save your answers anywhere. Download a PDF now and bring it to Session 3.</p>
+    <button class="btn-print btn-print--lg" onclick="window.print()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Save as PDF
+    </button>
+  </div>
+
+  <div class="footer">
+    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMjAgMzIwIiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IlBpZXIgTWFydGluIG1vbm9ncmFtIj4KICAKICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMzIwIiBoZWlnaHQ9IjMyMCIgZmlsbD0iI0ZBRjdGMCI+PC9yZWN0PgogIDx0ZXh0IHg9IjkyIiB5PSIyMjIiIGZvbnQtZmFtaWx5PSJDb3Jtb3JhbnQgR2FyYW1vbmQsIEdlb3JnaWEsIHNlcmlmIiBmb250LXdlaWdodD0iNTAwIiBmb250LXNpemU9IjI0MCIgZmlsbD0iIzJBMzA1MCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+UDwvdGV4dD4KICA8bGluZSB4MT0iMTYwIiB5MT0iNzAiIHgyPSIxNjAiIHkyPSIyNTAiIHN0cm9rZT0iIzdCQTA5OCIgc3Ryb2tlLXdpZHRoPSIyIj48L2xpbmU+CiAgPHRleHQgeD0iMjI4IiB5PSIyMjIiIGZvbnQtZmFtaWx5PSJDb3Jtb3JhbnQgR2FyYW1vbmQsIEdlb3JnaWEsIHNlcmlmIiBmb250LXdlaWdodD0iNTAwIiBmb250LXNpemU9IjI0MCIgZmlsbD0iIzJBMzA1MCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+TTwvdGV4dD4KPC9zdmc+" alt="Pier Martin"/>
+    <span>Pier Martin &middot; The Visibility Gap</span>
+  </div>
+
+</div>
+
+<script>
+(function(){
+  var DAYS = 5;
+  var START = 8 * 60;      // 08:00
+  var END   = 18 * 60;     // 18:00
+  var STEP  = 30;
+
+  function fmt(m){
+    var h = Math.floor(m/60), mm = m%60;
+    return (h<10?'0':'')+h+':'+(mm<10?'0':'')+mm;
+  }
+  function timeLabel(m){ return fmt(m)+'–'+fmt(m+STEP); }
+
+  var delIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>';
+  var plusIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>';
+
+  function makeRow(label){
+    var row = document.createElement('div');
+    row.className = 'block-row';
+    var t = document.createElement('div');
+    t.className = 'block-time';
+    t.textContent = label;
+    var what = document.createElement('input');
+    what.className = 'block-what';
+    what.type = 'text';
+    what.placeholder = '-';
+    var picker = document.createElement('div');
+    picker.className = 'tag-picker';
+    ['A','D','L','N'].forEach(function(tag){
+      var chip = document.createElement('button');
+      chip.className = 'tag-chip';
+      chip.type = 'button';
+      chip.setAttribute('data-tag', tag);
+      chip.textContent = tag;
+      chip.addEventListener('click', function(){
+        var on = chip.classList.contains('is-on');
+        picker.querySelectorAll('.tag-chip').forEach(function(c){ c.classList.remove('is-on'); });
+        if(!on){ chip.classList.add('is-on'); }
+        recount();
+      });
+      picker.appendChild(chip);
+    });
+    var del = document.createElement('button');
+    del.className = 'row-del';
+    del.type = 'button';
+    del.title = 'Delete this block';
+    del.innerHTML = delIcon;
+    del.addEventListener('click', function(){ row.remove(); recount(); });
+    picker.appendChild(del);
+
+    row.appendChild(t); row.appendChild(what); row.appendChild(picker);
+    return row;
+  }
+
+  var daysHost = document.getElementById('days');
+  for(var d=1; d<=DAYS; d++){
+    var day = document.createElement('div');
+    day.className = 'day';
+
+    var head = document.createElement('div');
+    head.className = 'day__head';
+    var title = document.createElement('div');
+    title.className = 'day__title';
+    title.innerHTML = 'Day ' + d + ' <em>08:00–18:00</em>';
+    var dateWrap = document.createElement('div');
+    dateWrap.className = 'day__date';
+    var dlab = document.createElement('label'); dlab.textContent = 'Date';
+    var dinput = document.createElement('input'); dinput.type='text'; dinput.placeholder='e.g. Mon 26 May';
+    dateWrap.appendChild(dlab); dateWrap.appendChild(dinput);
+    head.appendChild(title); head.appendChild(dateWrap);
+
+    var tbl = document.createElement('div');
+    tbl.className = 'tbl';
+    var th = document.createElement('div');
+    th.className = 'tbl__head';
+    th.innerHTML = '<div>Time block</div><div>What happened</div><div>Tag</div>';
+    tbl.appendChild(th);
+
+    for(var m=START; m<END; m+=STEP){
+      tbl.appendChild(makeRow(timeLabel(m)));
+    }
+
+    var add = document.createElement('button');
+    add.className = 'add-row';
+    add.type = 'button';
+    add.innerHTML = plusIcon + ' Add a block';
+    (function(tblRef){
+      add.addEventListener('click', function(){
+        var last = tblRef.querySelectorAll('.block-row');
+        var nextLabel = '';
+        if(last.length){
+          var lastTime = last[last.length-1].querySelector('.block-time').textContent;
+          var parts = lastTime.split('–');
+          if(parts[1]){
+            var hm = parts[1].split(':'); var mins = parseInt(hm[0],10)*60 + parseInt(hm[1],10);
+            nextLabel = timeLabel(mins);
+          }
+        }
+        tblRef.appendChild(makeRow(nextLabel || ''));
+      });
+    })(tbl);
+
+    day.appendChild(head); day.appendChild(tbl); day.appendChild(add);
+    daysHost.appendChild(day);
+  }
+
+  // ── Tally ──
+  var NAMES = {A:'Align', D:'Decide', L:'Learn', N:'Noise'};
+  function recount(){
+    var c = {A:0,D:0,L:0,N:0};
+    document.querySelectorAll('#days .tag-chip.is-on').forEach(function(chip){
+      c[chip.getAttribute('data-tag')]++;
+    });
+    var total = c.A+c.D+c.L+c.N;
+    ['A','D','L','N'].forEach(function(t){
+      document.querySelector('[data-count="'+t+'"]').textContent = c[t];
+      var pctEl = document.querySelector('[data-pct="'+t+'"]');
+      pctEl.textContent = total ? Math.round(c[t]/total*100)+'%' : '-';
+    });
+    document.getElementById('totalCount').textContent = total;
+    document.getElementById('barCount').innerHTML = '<b>'+total+'</b> block'+(total===1?'':'s')+' tagged';
+
+    var bar = document.getElementById('splitbar');
+    if(!total){
+      bar.innerHTML = '<div class="splitbar__empty">Tag your blocks to see the split</div>';
+      document.getElementById('splitRead').textContent = '';
+      return;
+    }
+    bar.innerHTML = '';
+    ['A','D','L','N'].forEach(function(t){
+      if(!c[t]) return;
+      var seg = document.createElement('div');
+      seg.className = 'splitbar__seg splitbar__seg--'+t.toLowerCase();
+      seg.style.width = (c[t]/total*100)+'%';
+      seg.title = NAMES[t]+': '+c[t]+' ('+Math.round(c[t]/total*100)+'%)';
+      bar.appendChild(seg);
+    });
+
+    var dl = c.D + c.L, pctDL = Math.round(dl/total*100), pctN = Math.round(c.N/total*100);
+    var read = document.getElementById('splitRead');
+    var top = ['A','D','L','N'].reduce(function(a,b){ return c[b]>c[a]?b:a; }, 'A');
+    read.textContent = 'Decide + Learn is ' + pctDL + '% of your tagged week. Noise is ' + pctN + '%. Most of your time went to ' + NAMES[top] + '.';
+  }
+
+  recount();
+})();
+</script>
+
+</body>
+</html>
